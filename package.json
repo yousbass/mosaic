@@ -1,0 +1,35 @@
+{
+  "name": "mosaic",
+  "version": "0.5.0",
+  "private": true,
+  "description": "Mosaic: one command center for people who work several jobs. Calendar, mail, tasks, tenders and reports by job, with an AI assistant. Runs as a claude.ai artifact.",
+  "author": "yousbass",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "vite build && node scripts/assemble.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p .",
+    "check": "npm run typecheck && npm test && npm run build",
+    "test:browser": "python3 scripts/ui_test.py && python3 scripts/live_test.py && python3 scripts/send_test.py && python3 scripts/remove_test.py",
+    "shots": "python3 scripts/shots.py"
+  },
+  "dependencies": {
+    "lucide-react": "^0.460.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/ibm-plex-sans-arabic": "^5.3.0",
+    "@fontsource/plus-jakarta-sans": "^5.3.0",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9"
+  },
+  "keywords": []
+}
